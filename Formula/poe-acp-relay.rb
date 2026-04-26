@@ -5,21 +5,21 @@
 class PoeAcpRelay < Formula
   desc "HTTP relay between Poe server bots and ACP-speaking agents"
   homepage "https://github.com/kfet/poe-acp-relay"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kfet/poe-acp-relay/releases/download/v0.2.0/poe-acp-relay-darwin-amd64"
-      sha256 "379eac0787c44a1faa84f8a37022eecc9d640ad9c2d6e82dd572a30d774e9571"
+      url "https://github.com/kfet/poe-acp-relay/releases/download/v0.3.0/poe-acp-relay-darwin-amd64"
+      sha256 "b613c8562308ef7b86e258580d590b3e4c31306cef945309c1681e93ae158f0f"
 
       define_method(:install) do
         bin.install Dir["poe-acp-relay-*"].first => "poe-acp-relay"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kfet/poe-acp-relay/releases/download/v0.2.0/poe-acp-relay-darwin-arm64"
-      sha256 "1698f97c778628bfe92c8773d8dd283801f98708663d440ae9f3565f9a98e35f"
+      url "https://github.com/kfet/poe-acp-relay/releases/download/v0.3.0/poe-acp-relay-darwin-arm64"
+      sha256 "bf2371712017a9e8b4b59743c1e86bb2f87086a5bc413a925153fe8b3264c41d"
 
       define_method(:install) do
         bin.install Dir["poe-acp-relay-*"].first => "poe-acp-relay"
@@ -29,22 +29,22 @@ class PoeAcpRelay < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kfet/poe-acp-relay/releases/download/v0.2.0/poe-acp-relay-linux-amd64"
-      sha256 "ed8f0ab50412f9e4d00164539aa64d209753a21729e8d93b167af335f0c3a68b"
+      url "https://github.com/kfet/poe-acp-relay/releases/download/v0.3.0/poe-acp-relay-linux-amd64"
+      sha256 "f3b4976d57d996b7364510354e369ce6025063a95eebbc31e5c019f69e45d618"
       define_method(:install) do
         bin.install Dir["poe-acp-relay-*"].first => "poe-acp-relay"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/kfet/poe-acp-relay/releases/download/v0.2.0/poe-acp-relay-linux-armv6"
-      sha256 "2a600b9809bee4d062198c128a1648f6195f6ac4e63c38ded0a08bc7fa55532c"
+      url "https://github.com/kfet/poe-acp-relay/releases/download/v0.3.0/poe-acp-relay-linux-armv6"
+      sha256 "2dfc1d273fa5d6a884bed6c8c463756658c35fd28a840709823885e7a543c3c1"
       define_method(:install) do
         bin.install Dir["poe-acp-relay-*"].first => "poe-acp-relay"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kfet/poe-acp-relay/releases/download/v0.2.0/poe-acp-relay-linux-arm64"
-      sha256 "9ba72e9ed19b3b4360d5586c2be7da6d81461daa5d6f0da797b5ad98f7ee00eb"
+      url "https://github.com/kfet/poe-acp-relay/releases/download/v0.3.0/poe-acp-relay-linux-arm64"
+      sha256 "11519c82ff22e1b87fd3e93dda6598775cde2279781a877360b282193e7816af"
       define_method(:install) do
         bin.install Dir["poe-acp-relay-*"].first => "poe-acp-relay"
       end
